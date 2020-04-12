@@ -1,0 +1,9 @@
+// Get contacts from mailbox correspondents and add to address book
+{
+  "default_locale": "en",
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
+  "version": "0.1",
+  
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <!-- Head: Document metadata -->
+  <head>
+    <meta charset="utf-8">
+    <title>Add-on menu</title>
+    <!-- Use following css stylesheet -->
+    <link rel="stylesheet" type="text/css" media="screen" href="menu_popup.css">
+    <!-- Run following script when popup opens -->
+    <script src="scripts/tbcontacte.js"></script>
+  </head>
+  <body>
+    <div class="popup-page">
+      Hello<br><br>
+      <!-- Dropdown containing mailboxes for extraction -->
+      <label for="mailboxes">Choose a mailbox to get contacts from:<br></label>
+      <br>
+      <select>
+        <!-- Script to make the list of options, each mailbox -->
+        <script type="text/javascript">
+        var stri = "";
+        var mboptions = "<option value='0'>select mailbox</option>";
+        document.write("<option value='0'>select mailbox</option>")
+        document.write("<option value='1'>mailbox 1</option>")
+        document.write("<option value='2'>mailbox 2</option>")
+        for(i=3;i<5;i++){
+          stri = "<option value='"+i+"'>mailbox "+i+"</option>";
+          document.write(stri);
+        }
+        </script>
+      </select>
+    </div>
+  </body>
+</html>
