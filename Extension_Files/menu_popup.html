@@ -18,17 +18,34 @@
       <select>
         <!-- Script to make the list of options, each mailbox -->
         <script type="text/javascript">
-        var stri = "";
-        var mboptions = "<option value='0'>select mailbox</option>";
-        document.write("<option value='0'>select mailbox</option>")
-        document.write("<option value='1'>mailbox 1</option>")
-        document.write("<option value='2'>mailbox 2</option>")
-        for(i=3;i<5;i++){
-          stri = "<option value='"+i+"'>mailbox "+i+"</option>";
-          document.write(stri);
-        }
+          var stri = "";
+          var mboptions = "<option value='0'>select mailbox</option>";
+          document.write("<option value='0'>select mailbox</option>")
+          document.write("<option value='1'>mailbox 1</option>")
+          document.write("<option value='2'>mailbox 2</option>")
+          for(i=3;i<5;i++){
+            stri = "<option value='"+i+"'>mailbox "+i+"</option>";
+            document.write(stri);
+          }
         </script>
-      </select>
+      </select><br><br>
+      Choose an address book to add contacts to:<br><br>
+      <!-- Dropdown containing available address books, and (eventually) an entry to create a new one -->
+      <select>
+        <script type="text/javascript">
+          // Pre-define strings to use
+          var prstr = ""; // String to print
+          var aboptions = "<option value='0'>select address book</option>"; // Address book dropdown first option
+          document.write(aboptions);
+          for(j=1;j<4;j++){
+            prstr = "<option value='"+j+"'>book "+j+"</option>";
+            document.write(prstr);
+          }
+        </script>
+      </select><br><br>
+    <!-- Add option to search from last x number of emails -->
+    Use last <input type="number" id="msgno" name="msgno" size=5 value=2 min=1 max="1000"> messages.<br><br>
+
     </div>
   </body>
 </html>
